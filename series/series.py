@@ -18,6 +18,7 @@ def lucas(n):
 
 def sum_series(n, optional1=0, optional2=1):
     if n == 0:
+        i=0
         return optional1
     elif n == 1:
         return optional2
