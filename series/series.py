@@ -25,4 +25,4 @@ def sum_series(n, optional1=0, optional2=1):
         return sum_series(n - 2,optional1,optional2) + sum_series(n - 1,optional1,optional2)
 
 fibonacci(2)
-# sum_series(n)
+# sum_series(n )
