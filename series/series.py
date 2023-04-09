@@ -18,12 +18,11 @@ def lucas(n):
 
 def sum_series(n, optional1=0, optional2=1):
     if n == 0:
-        return optional1
+        return optional1 
     elif n == 1:
         return optional2
-    elif n >= 2:
-        return sum_series(n - 2) + sum_series(n - 1)
-    return n
+    elif n >= 2: 
+        return sum_series(n - 2,optional1,optional2) + sum_series(n - 1,optional1,optional2)
 
 fibonacci(2)
 # sum_series(n)

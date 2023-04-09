@@ -1,5 +1,5 @@
 # Math Series
-<!-- Description of the challenge -->
+<!-- Description of the challenge  -->
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
