@@ -19,10 +19,11 @@ def fibonacci(n):
         >>> fibonacci(10)
         55    
         '''
+    if n < 0 :
+        return 'Please write non-negative number'
     if n >= 2:
         return fibonacci(n - 2) + fibonacci(n - 1)
     return n
-    
 
 
 def lucas(n):
@@ -45,6 +46,8 @@ def lucas(n):
         >>> Lucas(3)
         4    
     '''
+    if n < 0 :
+        return 'Please write non-negative number'
     if n == 0:
         return n+2
     elif n == 1:
@@ -81,20 +84,27 @@ def sum_series(n, optional1=0, optional2=1):
         5 
     '''
     series_name = ''
-    if optional1==0 and optional2==1:
+
+    if n == 0 and optional1 == 0 and optional2 == 0:
+        return 0
+    if n < 0 :
+        return 'Please write non-negative number'
+    
+    if optional1 == 0 and optional2 == 1:
         series_name = 'Fibonacci series'
-    elif optional1==2 and optional2==1:
-        series_name = 'Lucas series'  
-    elif optional1!=0 and optional2!=1:
-        series_name = 'Series'    
-           
+    elif optional1 == 2 and optional2 == 1:
+        series_name = 'Lucas series'
+    elif optional1 != 0 and optional2 != 1:
+        series_name = 'Series'
+
     if n == 0:
         return optional1, f'It is {series_name}'
     elif n == 1:
         return optional2, f'It is {series_name}'
-    elif n >= 2: 
-        num = sum_series(n - 2, optional1, optional2)[0] + sum_series(n - 1, optional1, optional2)[0]
+    elif n >= 2:
+        num = sum_series(
+            n - 2, optional1, optional2)[0] + sum_series(n - 1, optional1, optional2)[0]
         return num, f'It is {series_name}'
-     
 
-print(sum_series(3,2,1))
+
+print(sum_series(3, 2, 1))
