@@ -1,8 +1,6 @@
 import pytest
-from series.series import fibonacci
-from series.series import lucas
-from series.series import sum_series
 
+from series.series import fibonacci,lucas,sum_series
 
 '''
 fibonacci(0) == 0
@@ -12,7 +10,6 @@ fibonacci(3) == 2
 fibonacci(4) == 3 
 etc.
 '''
-
 def test_zero():
     actual = fibonacci(0)
     expected = 0
@@ -37,6 +34,7 @@ def test_three():
     assert actual == expected
 
 
+
 '''
 lucas(0) == 2
 lucas(1) == 1 
@@ -45,8 +43,6 @@ lucas(3) == 4
 lucas(4) == 7 
 etc.
 '''
-
-
 def test_zero():
     actual = lucas(0)
     expected = 2
@@ -69,9 +65,37 @@ def test_three():
     actual = lucas(3)
     expected = 4
     assert actual == expected
-#..............
 
+
+
+'''
+sum_series(n) == n (first value)
+sum_series(m) == m (secund value)
+sum_series(x) == n + m 
+sum_series(x) == (n + m) + m 
+etc.
+'''
 def test_zero():
-    actual = sum_series(0,1,0)
+    actual = sum_series(0)
+    expected = 0
+    assert actual == expected
+
+def test_one():
+    actual = sum_series(1)
     expected = 1
+    assert actual == expected
+
+def test_two():
+    actual = sum_series(2)
+    expected = 1
+    assert actual == expected
+
+def test_three():
+    actual = sum_series(3,2,2)
+    expected = 6
+    assert actual == expected
+
+def test_four():
+    actual = sum_series(4,3,2)
+    expected = 12
     assert actual == expected
