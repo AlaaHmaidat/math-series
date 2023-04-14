@@ -89,7 +89,7 @@ def sum_series(n, optional1=0, optional2=1):
         series_name = 'Series'    
            
     if n == 0:
-
+        return optional1, f'It is {series_name}'
     elif n == 1:
         return optional2, f'It is {series_name}'
     elif n >= 2: 
