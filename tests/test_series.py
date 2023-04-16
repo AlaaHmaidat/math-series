@@ -33,7 +33,10 @@ def test_three():
     expected = 2
     assert actual == expected
 
-
+def test_negative_num():
+    actual = fibonacci(-1)
+    expected = 'Please write non-negative number'
+    assert actual == expected
 
 '''
 lucas(0) == 2
@@ -67,6 +70,12 @@ def test_three():
     assert actual == expected
 
 
+def test_negative_num():
+    actual = lucas(-1)
+    expected = 'Please write non-negative number'
+    assert actual == expected
+
+
 
 '''
 sum_series(n) == n (first value)
@@ -77,25 +86,35 @@ etc.
 '''
 def test_zero():
     actual = sum_series(0)
-    expected = 0
+    expected = (0, 'It is Fibonacci series')
     assert actual == expected
 
 def test_one():
     actual = sum_series(1)
-    expected = 1
+    expected = (1, 'It is Fibonacci series')
     assert actual == expected
 
 def test_two():
     actual = sum_series(2)
-    expected = 1
+    expected = (1, 'It is Fibonacci series')
     assert actual == expected
 
 def test_three():
     actual = sum_series(3,2,2)
-    expected = 6
+    expected = (6, 'It is Series')
     assert actual == expected
 
 def test_four():
     actual = sum_series(4,3,2)
-    expected = 12
+    expected = (12, 'It is Series')
+    assert actual == expected
+
+def test_negative_num():
+    actual = sum_series(-1)
+    expected = 'Please write non-negative number'
+    assert actual == expected
+
+def test_zero_optionalzero():
+    actual = sum_series(0,0,0)
+    expected = 0
     assert actual == expected
